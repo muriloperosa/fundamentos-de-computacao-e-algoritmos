@@ -1,0 +1,33 @@
+<script>
+    
+    // LIFO - Last IN First OUT
+
+    console.log('[PILHA\STACK]');
+
+    class BrowserHistoryStack {
+        constructor() {
+            this.data = [];
+        }
+        push(item) {
+            this.data.push(item);
+        }
+        back() {
+            return this.data.pop();
+        }
+        print() {
+            console.log(this.data);
+        }
+    }
+
+    const history = new BrowserHistoryStack();
+    history.push('https://google.com');
+    history.push('https://facebook.com');
+    history.print();
+    history.back();
+    history.print();
+    history.push('https://twitter.com');
+    history.print();
+    history.back();
+    history.print();
+
+</script>
